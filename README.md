@@ -5,11 +5,14 @@ Este repositório contém a configuração para executar o servidor Jellyfin em 
 # Build
 Com o Dockerfile localizado no diretório atual, construa a imagem Docker usando o comando:
 
-```docker build -t jellyfin-server .
+```
+docker build -t jellyfin-server .
+```
 
 Depois de construir a imagem, execute o contêiner com o seguinte comando:
 
-```docker run -d \
+```
+docker run -d \
   --name jellyfin-server \
   -p 8096:8096 \
   -p 8920:8920 \
@@ -17,6 +20,7 @@ Depois de construir a imagem, execute o contêiner com o seguinte comando:
   -v $(pwd)/Music:/media/Music \
   -v $(pwd)/Video:/media/Video \
   jellyfin-server
+```
 
 
 Onde media/Music e media/Video são apenas diretórios de exemplo para serem usado no jellyfin
